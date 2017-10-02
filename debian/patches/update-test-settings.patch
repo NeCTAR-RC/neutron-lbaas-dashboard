@@ -1,0 +1,16 @@
+Description: TEMPLATE_CONTEXT_PROCESSORS has no initial value,
+             therefore just initialize it in tests/settings.py.
+Author: Corey Bryant <corey.bryant@canonical.com>
+Forwarded: no
+
+--- a/neutron_lbaas_dashboard/tests/settings.py
++++ b/neutron_lbaas_dashboard/tests/settings.py
+@@ -38,7 +38,7 @@
+     os.path.join(TEST_DIR, 'templates'),
+ )
+ 
+-TEMPLATE_CONTEXT_PROCESSORS += (
++TEMPLATE_CONTEXT_PROCESSORS = (
+     'openstack_dashboard.context_processors.openstack',
+ )
+ 

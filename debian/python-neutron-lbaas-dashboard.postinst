@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ] ; then
+    echo "Collecting and compressing static assets..."
+    python /usr/share/openstack-dashboard/manage.py collectstatic --clear --noinput
+    python /usr/share/openstack-dashboard/manage.py compress --force
+
+    if [ -e /var/lib/openstack-dashboard/static ] ; then
+        chown -R www-data /var/lib/openstack-dashboard/static
+    fi
+fi
+
+#DEBHELPER#
+
+exit 0
