@@ -333,15 +333,15 @@
       });
 
       it('has array of listener protocols', function() {
-        expect(model.listenerProtocols).toEqual(['HTTP', 'TCP', 'TERMINATED_HTTPS']);
+        expect(model.listenerProtocols).toEqual(['TCP']);
       });
 
       it('has array of pool methods', function() {
-        expect(model.methods).toEqual(['LEAST_CONNECTIONS', 'ROUND_ROBIN', 'SOURCE_IP']);
+        expect(model.methods).toEqual(['ROUND_ROBIN']);
       });
 
       it('has array of monitor types', function() {
-        expect(model.monitorTypes).toEqual(['HTTP', 'PING', 'TCP']);
+        expect(model.monitorTypes).toEqual(['PING', 'TCP']);
       });
 
       it('has array of monitor methods', function() {
@@ -571,8 +571,8 @@
       });
 
       it('should initialize listener protocols', function() {
-        expect(model.listenerProtocols.length).toBe(3);
-        expect(model.listenerProtocols.indexOf('TERMINATED_HTTPS')).toBe(2);
+        expect(model.listenerProtocols.length).toBe(1);
+        // expect(model.listenerProtocols.indexOf('TERMINATED_HTTPS')).toBe(2);
       });
     });
 
@@ -621,8 +621,8 @@
       });
 
       it('should initialize listener protocols', function() {
-        expect(model.listenerProtocols.length).toBe(2);
-        expect(model.listenerProtocols.indexOf('TERMINATED_HTTPS')).toBe(-1);
+        expect(model.listenerProtocols.length).toBe(1);
+        // expect(model.listenerProtocols.indexOf('TERMINATED_HTTPS')).toBe(-1);
       });
     });
 
