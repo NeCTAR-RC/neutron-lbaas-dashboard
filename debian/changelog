@@ -1,0 +1,89 @@
+neutron-lbaas-dashboard (4.0.0-0ubuntu1~cloud0) xenial-queens; urgency=medium
+
+  * New upstream release for the Ubuntu Cloud Archive.
+
+ -- Openstack Ubuntu Testing Bot <openstack-testing-bot@ubuntu.com>  Wed, 28 Feb 2018 19:59:57 +0000
+
+neutron-lbaas-dashboard (4.0.0-0ubuntu1) bionic; urgency=medium
+
+  * New upstream release for OpenStack Queens.
+
+ -- James Page <james.page@ubuntu.com>  Wed, 28 Feb 2018 16:55:39 +0000
+
+neutron-lbaas-dashboard (4.0.0~rc1-0ubuntu1) bionic; urgency=medium
+
+  * New upstream milestone for OpenStack Queens.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 12 Feb 2018 17:54:12 +0000
+
+neutron-lbaas-dashboard (4.0.0~b3-0ubuntu1) bionic; urgency=medium
+
+  * New upstream milestone for OpenStack Queens.
+  * d/watch: Scope to Queens series.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 26 Jan 2018 14:15:08 -0500
+
+neutron-lbaas-dashboard (4.0.0~b2-0ubuntu1) bionic; urgency=medium
+
+  * New upstream milestone for OpenStack Queens.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/*: wrap-and-sort -bast.
+  * d/control: Bump minimum debhelper version to 10.
+  * d/control: Bumped Standards-Version to 4.1.2.
+
+ -- James Page <james.page@ubuntu.com>  Tue, 12 Dec 2017 11:45:41 +0000
+
+neutron-lbaas-dashboard (4.0.0~b1-0ubuntu1) bionic; urgency=medium
+
+  * New upstream milestone for OpenStack Queens.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/use-action-present-past.patch: Dropped, no longer needed.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 16 Nov 2017 17:55:45 +0000
+
+neutron-lbaas-dashboard (3.0.1-0ubuntu1) artful; urgency=medium
+
+  * New upstream release for OpenStack Pike.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 31 Aug 2017 08:56:36 +0100
+
+neutron-lbaas-dashboard (3.0.0~rc1-0ubuntu1) artful; urgency=medium
+
+  [ James Page ]
+  * d/rules: Only install _1481_project_ng_loadbalancersv2_panel.py,
+    avoiding duplicate LBaaS panels inline with upstream installation
+    documentation (LP: #1709604).
+  * New upstream milestone for OpenStack Pike.
+
+  [ Corey Bryant ]
+  * New upstream release candidate for OpenStack Pike.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/use-action-present-past.patch: Cherry-pick patch from gerrit to
+    fix failing tests.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 18 Aug 2017 16:01:15 -0400
+
+neutron-lbaas-dashboard (3.0.0~b1-0ubuntu1) artful; urgency=medium
+
+  * New upstream milestone for OpenStack Pike.
+  * Align (Build-)Depends with upstream milestone.
+  * d/python-neutron-lbaas-dashboard.postinst: Tidy, switch to using
+    horizon user instead of www-data.
+
+ -- James Page <james.page@ubuntu.com>  Wed, 10 May 2017 12:10:14 -0400
+
+neutron-lbaas-dashboard (2.0.0-0ubuntu1) zesty; urgency=medium
+
+  * New upstream release.
+  
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 09 Mar 2017 11:08:18 -0500
+
+neutron-lbaas-dashboard (1.0.0-0ubuntu1) zesty; urgency=medium
+
+  * Initial release.
+  * d/*: Various updates for initial release.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 26 Jan 2017 10:32:28 -0500
