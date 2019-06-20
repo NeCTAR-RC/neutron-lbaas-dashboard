@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ] ; then
+  (
+    cd /usr/share/openstack-dashboard
+    echo "Collecting and compressing static assets..."
+    rm -rf /var/lib/openstack-dashboard/static/ || :
+    python3 manage.py collectstatic --noinput 2>&1 > /dev/null
+    python3 manage.py compress --force 2>&1 > /dev/null
+  )
+
+  if [ -e /var/lib/openstack-dashboard ] ; then
+    chown -R horizon:horizon /var/lib/openstack-dashboard
+  fi
+fi
+
+#DEBHELPER#
+
+exit 0

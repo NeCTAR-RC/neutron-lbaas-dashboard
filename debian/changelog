@@ -1,0 +1,165 @@
+neutron-lbaas-dashboard (6.0.0-0ubuntu1~cloud0) bionic-stein; urgency=medium
+
+  * New upstream release for the Ubuntu Cloud Archive.
+
+ -- Openstack Ubuntu Testing Bot <openstack-testing-bot@ubuntu.com>  Fri, 12 Apr 2019 09:49:48 +0000
+
+neutron-lbaas-dashboard (6.0.0-0ubuntu1) disco; urgency=medium
+
+  * New upstream release for OpenStack Stein.
+
+ -- James Page <james.page@ubuntu.com>  Fri, 12 Apr 2019 10:00:28 +0100
+
+neutron-lbaas-dashboard (6.0.0~rc1-0ubuntu1) disco; urgency=medium
+
+  * d/watch: track 6.x series.
+  * New upstream release candidate for OpenStack Stein.
+
+ -- James Page <james.page@ubuntu.com>  Fri, 22 Mar 2019 14:09:27 +0000
+
+neutron-lbaas-dashboard (6.0.0~b1~git2019031935.8630dfe-0ubuntu1) disco; urgency=medium
+
+  * New upstream snapshot for OpenStack Stein.
+
+ -- James Page <james.page@ubuntu.com>  Tue, 19 Mar 2019 11:17:34 +0000
+
+neutron-lbaas-dashboard (6.0.0~b1~git2019013120.ba14bba-0ubuntu1) disco; urgency=medium
+
+  * New upstream snapshot for OpenStack Stein.
+  * d/control,rules,python*: Drop Python 2 support.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 01 Feb 2019 09:09:07 -0500
+
+neutron-lbaas-dashboard (5.0.0-0ubuntu1) cosmic; urgency=medium
+
+  * New upstream release for OpenStack Rocky.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 30 Aug 2018 13:35:20 -0400
+
+neutron-lbaas-dashboard (5.0.0~rc2-0ubuntu1) cosmic; urgency=medium
+
+  * New upstream release candidate for OpenStack Rocky.
+  * d/p/update-test-settings.patch: Dropped. No longer needed.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 23 Aug 2018 14:05:47 -0400
+
+neutron-lbaas-dashboard (5.0.0~b1-0ubuntu3) cosmic; urgency=medium
+
+  * d/control: Bump min version of python(3)-django-horizon.
+  * d/control: Drop python(3)-neutron-lbaas-dashboard conflicts to align with
+    other dashboards.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 12 Jul 2018 11:30:13 -0400
+
+neutron-lbaas-dashboard (5.0.0~b1-0ubuntu2) cosmic; urgency=medium
+
+  * Add support for Python 3:
+    - d/control: Add Py3 BDs and python3-neutron-lbaas-dashboard package.
+    - d/control: Make python(3)-neutron-lbaas-dashboard conflict against each
+      other.
+    - d/rules: Add Py3 support.
+    - python(3)-neutron-lbaas-dashboard.postinst: Added py3 postinst script
+      and updated both scripts to ensure proper python binary is used when
+      collecting/compressing static assets.
+  * d/rules: Drop copy of static files to /usr/share/openstack-
+    dashboard/openstack_dashboard/static. Static files are already collected
+    from /usr/lib/python3/dist-packages/neutron_lbaas_dashboard/static/.
+  * d/rules: Drop dup cp of dashboard. python-django-horizon uses update-
+    alternatives to point /usr/share/openstack-dashboard/openstack_dashboard
+    at /usr/lib/python*/dist-packages/openstack_dashboard.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Mon, 09 Jul 2018 18:36:44 -0400
+
+neutron-lbaas-dashboard (5.0.0~b1-0ubuntu1) cosmic; urgency=medium
+
+  * d/watch: Scope to 5.x series.
+  * New upstream milestone for OpenStack Rocky.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/control: Update Standards-Version to 4.1.4.
+  * d/control: Enable autopkgtest-pkg-python testsuite.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 31 May 2018 14:35:32 -0400
+
+neutron-lbaas-dashboard (4.0.0-0ubuntu1) bionic; urgency=medium
+
+  * New upstream release for OpenStack Queens.
+
+ -- James Page <james.page@ubuntu.com>  Wed, 28 Feb 2018 16:55:39 +0000
+
+neutron-lbaas-dashboard (4.0.0~rc1-0ubuntu1) bionic; urgency=medium
+
+  * New upstream milestone for OpenStack Queens.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 12 Feb 2018 17:54:12 +0000
+
+neutron-lbaas-dashboard (4.0.0~b3-0ubuntu1) bionic; urgency=medium
+
+  * New upstream milestone for OpenStack Queens.
+  * d/watch: Scope to Queens series.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 26 Jan 2018 14:15:08 -0500
+
+neutron-lbaas-dashboard (4.0.0~b2-0ubuntu1) bionic; urgency=medium
+
+  * New upstream milestone for OpenStack Queens.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/*: wrap-and-sort -bast.
+  * d/control: Bump minimum debhelper version to 10.
+  * d/control: Bumped Standards-Version to 4.1.2.
+
+ -- James Page <james.page@ubuntu.com>  Tue, 12 Dec 2017 11:45:41 +0000
+
+neutron-lbaas-dashboard (4.0.0~b1-0ubuntu1) bionic; urgency=medium
+
+  * New upstream milestone for OpenStack Queens.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/use-action-present-past.patch: Dropped, no longer needed.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 16 Nov 2017 17:55:45 +0000
+
+neutron-lbaas-dashboard (3.0.1-0ubuntu1) artful; urgency=medium
+
+  * New upstream release for OpenStack Pike.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 31 Aug 2017 08:56:36 +0100
+
+neutron-lbaas-dashboard (3.0.0~rc1-0ubuntu1) artful; urgency=medium
+
+  [ James Page ]
+  * d/rules: Only install _1481_project_ng_loadbalancersv2_panel.py,
+    avoiding duplicate LBaaS panels inline with upstream installation
+    documentation (LP: #1709604).
+  * New upstream milestone for OpenStack Pike.
+
+  [ Corey Bryant ]
+  * New upstream release candidate for OpenStack Pike.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/use-action-present-past.patch: Cherry-pick patch from gerrit to
+    fix failing tests.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 18 Aug 2017 16:01:15 -0400
+
+neutron-lbaas-dashboard (3.0.0~b1-0ubuntu1) artful; urgency=medium
+
+  * New upstream milestone for OpenStack Pike.
+  * Align (Build-)Depends with upstream milestone.
+  * d/python-neutron-lbaas-dashboard.postinst: Tidy, switch to using
+    horizon user instead of www-data.
+
+ -- James Page <james.page@ubuntu.com>  Wed, 10 May 2017 12:10:14 -0400
+
+neutron-lbaas-dashboard (2.0.0-0ubuntu1) zesty; urgency=medium
+
+  * New upstream release.
+  
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 09 Mar 2017 11:08:18 -0500
+
+neutron-lbaas-dashboard (1.0.0-0ubuntu1) zesty; urgency=medium
+
+  * Initial release.
+  * d/*: Various updates for initial release.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 26 Jan 2017 10:32:28 -0500
