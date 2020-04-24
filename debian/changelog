@@ -1,3 +1,9 @@
+neutron-lbaas-dashboard (7.0.0-0ubuntu1) bionic-train; urgency=medium
+
+  * New fake upstream release for the Ubuntu Cloud Archive.
+
+ -- Openstack Ubuntu Testing Bot <openstack-testing-bot@ubuntu.com>  Fri, 12 Apr 2020 09:49:48 +0000
+
 neutron-lbaas-dashboard (6.0.0-0ubuntu1~cloud0) bionic-stein; urgency=medium
 
   * New upstream release for the Ubuntu Cloud Archive.
